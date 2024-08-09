@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const connectionString = "mongodb+srv://akhiljoseph:akhiljoseph@cluster0.hoizh.mongodb.net/TASKMANAGER?retryWrites=true&w=majority&appName=Cluster0"
+const connectionString = process.env.DATABASE
 mongoose.connect(connectionString).then(() => {
     console.log("MongoDB connection Success")
 }).catch((err) => {
